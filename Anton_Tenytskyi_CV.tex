@@ -3,233 +3,125 @@
 \usepackage{latexsym}
 \usepackage[empty]{fullpage}
 \usepackage{titlesec}
-\usepackage{marvosym}
 \usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
 \usepackage{enumitem}
 \usepackage[hidelinks]{hyperref}
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \input{glyphtounicode}
 
-
-%----------FONT OPTIONS----------
-% sans-serif
-% \usepackage[sfdefault]{FiraSans}
-% \usepackage[sfdefault]{roboto}
-% \usepackage[sfdefault]{noto-sans}
-% \usepackage[default]{sourcesanspro}
-
-% serif
-% \usepackage{CormorantGaramond}
-% \usepackage{charter}
-
 \pagestyle{empty}
-
-% Adjust margins
 \addtolength{\oddsidemargin}{-0.5in}
 \addtolength{\evensidemargin}{-0.5in}
 \addtolength{\textwidth}{1in}
 \addtolength{\topmargin}{-.5in}
 \addtolength{\textheight}{1.0in}
-
 \urlstyle{same}
-
 \raggedbottom
 \raggedright
 \setlength{\tabcolsep}{0in}
 
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-4pt}\scshape\raggedright\large
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
-
-% Ensure that generate pdf is machine readable/ATS parsable
+\titleformat{\section}{\vspace{-4pt}\scshape\raggedright\large}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
 \pdfgentounicode=1
 
-
-
-%---------CUSTOM COMMANDS----------------
-\newcommand{\resumeItem}[1]{
-  \item\small{
-    {#1 \vspace{-2pt}}
-  }
-}
-
+\newcommand{\resumeItem}[1]{\item\small{{#1 \vspace{-2pt}}}}
 \newcommand{\resumeSubheading}[3]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1 --- #2} & #3 \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1 --- #2} & #3 \\
+  \end{tabular*}\vspace{-7pt}
 }
-
 \newcommand{\resumeEduHeading}[3]{
   \vspace{-2pt}\item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textbf{#1} & #3 \\
-      #2 & \\
-    \end{tabular*}\vspace{-7pt}
+  \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #3 \\
+    #2 & \\
+  \end{tabular*}\vspace{-7pt}
 }
-
-\newcommand{\resumeSubSubheading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \textit{\small#1} & \textit{\small #2} \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeProjectHeading}[2]{
-    \item
-    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
-      \small#1 & #2 \\
-    \end{tabular*}\vspace{-7pt}
-}
-
-\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
-
-\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
-
 \newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.15in, label={}]}
 \newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
-\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.25in, label=\raisebox{0.25ex}{\tiny$\bullet$}]}
 \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
-%----------------------------------------
 
-
-%---------CV CONTENT STARTS HERE---------
-
-
-%------------HEADER----------------------
 \begin{document}
 
 \begin{center}
-    \textbf{\Huge Anton Tenytskyi} \\[4pt]
-    {\Large Python Software Engineer} \\[4pt]
-    \small Kyiv, Ukraine $|$ +380 73 024 30 32 $|$
-    \href{mailto:anton.tenytskyi@gmail.com}{anton.tenytskyi@gmail.com} $|$
-    Telegram: @anton\_tenytskyi
+  \textbf{\Huge Anton Tenytskyi} \\[4pt]
+  {\Large QA Automation Engineer} \\[4pt]
+  \small Kyiv, Ukraine $|$ +380 73 024 30 32 $|$
+  \href{mailto:anton.tenytskyi@gmail.com}{anton.tenytskyi@gmail.com} $|$
+  Telegram: @anton\_tenytskyi
 \end{center}
-%----------------------------------------
 
-
-
-%-----------SUMMARY----------------------
 \section{Summary}
-
 \small
-Software Engineer with 10+ years of experience in software development, specializing in Python development, automation, internal tooling, CI/CD workflows, observability platforms, and data processing systems.
+QA Automation Engineer with 10+ years of experience building automated test solutions for complex products. Strong Python background in automation framework development, UI/mobile and REST API validation, end-to-end workflow testing, and CI/CD integration. Experienced in security-sensitive and release-critical environments, including test traceability, production issue investigation, and observability.
 
-Experienced in designing Python applications that improve engineering productivity, automate release processes, generate traceability and reporting artifacts, and provide visibility into software quality.
-
-Domain experience includes automotive, cybersecurity, fintech, e-commerce, mobile, desktop, and embedded systems.
-%----------------------------------------
-
-%-----------SKILLS-----------------------
-\section{Skills}
- \begin{itemize}[leftmargin=0.15in, label={}]
-    \small{\item{
-    \textbf{Languages}{: Python, SQL} \\
-    \textbf{Databases}{: PostgreSQL} \\
-    \textbf{Backend Technologies}{: FastAPI, Flask, REST APIs, pydantic} \\
-    \textbf{DevOps \& Platforms}{: Git, GitLab, Docker, OpenShift, GoCD} \\
-    \textbf{Observability}{: Grafana, Kibana, Elasticsearch} \\
-    \textbf{Testing}{: pytest, Selenium, Appium} \\
-    \textbf{Data \& Visualization}{: pandas, NumPy, Matplotlib, Streamlit} \\
+\section{Core Skills}
+\begin{itemize}[leftmargin=0.15in, label={}]
+  \small{\item{
+    \textbf{Test Automation}{: Python, pytest, Playwright, Selenium, Appium, REST APIs, custom framework design} \\
+    \textbf{CI/CD \& Tooling}{: Jenkins, Git, GitLab, Docker, OpenShift, GoCD, release automation} \\
+    \textbf{Observability \& Reporting}{: Grafana, Kibana, Elasticsearch, traceability, release-quality metrics} \\
+    \textbf{Additional}{: SQL, PostgreSQL, FastAPI, Flask, pandas, Streamlit} \\
     \textbf{English}{: C1}
+  }}
+\end{itemize}
 
-    }}
- \end{itemize}
-%----------------------------------------
-
-
-
-%-----------EXPERIENCE-------------------
 \section{Experience}
-  \resumeSubHeadingListStart
+\resumeSubHeadingListStart
 
+  \resumeSubheading{GlobalLogic}{Python Developer | Automotive}{2023-11 -- 2025-10}
+  \resumeItemListStart
+    \resumeItem{Built Python tooling for release automation, quality reporting, and engineering productivity in an automotive environment}
+    \resumeItem{Refactored a critical CI/CD job, reducing execution time from 20 hours to 30 minutes and accelerating release feedback}
+    \resumeItem{Developed a traceability matrix system aggregating Doorstop, SystemWeaver, and custom engineering sources to support quality evidence}
+    \resumeItem{Created Grafana and Kibana dashboards plus reporting pipelines for quality, release, and engineering-metrics monitoring}
+  \resumeItemListEnd
+  \vspace{4pt}
 
-    \resumeSubheading
-      {GlobalLogic}
-      {Python Developer | Automotive}
-      {2023-11 -- 2025-10}
-      \resumeItemListStart
-        \resumeItem{Developed Python-based internal tooling for release automation, reporting, and engineering productivity}
-        \resumeItem{Refactored a critical CI/CD job, reducing execution time from 20 hours to 30 minutes}
-        \resumeItem{Built a traceability matrix generation system aggregating data from Doorstop, SystemWeaver, and custom engineering sources}
-        \resumeItem{Developed Streamlit applications for engineering teams}
-        \resumeItem{Designed and maintained Grafana and Kibana dashboards for quality and release monitoring}
-        \resumeItem{Developed reporting pipelines and observability solutions for engineering metrics collection and analysis}
-      \resumeItemListEnd
-      \vspace{5pt}
-        
+  \resumeSubheading{Grid Dynamics}{Automation Test Engineer | Cybersecurity}{2022-09 -- 2023-11}
+  \resumeItemListStart
+    \resumeItem{Designed and implemented a Python/pytest automation framework from scratch for simulation of security-event workflows}
+    \resumeItem{Eliminated manual validation for critical XDR workflows through automated end-to-end verification}
+    \resumeItem{Built tools that emulated complex threat scenarios, enabling repeatable validation of detection logic}
+  \resumeItemListEnd
+  \vspace{4pt}
 
-    \resumeSubheading
-      {Grid Dynamics}
-      {Automation Test Engineer | Cybersecurity}
-      {2022-09 -- 2023-11}
-      \resumeItemListStart
-        \resumeItem{Designed and implemented a Python/Pytest framework from scratch to support simulation of security event workflows}
-        \resumeItem{Eliminated manual validation efforts for critical XDR security workflows through automation}
-        \resumeItem{Developed tools to emulate complex threat scenarios for an XDR platform, enabling validation of detection logic}
-      \resumeItemListEnd
-      \vspace{5pt}
-    
+  \resumeSubheading{Ledger}{Automation Test Engineer | Fintech / Cryptocurrency}{2021-08 -- 2022-09}
+  \resumeItemListStart
+    \resumeItem{Developed automated validation and regression testing for an enterprise cryptocurrency custody platform}
+    \resumeItem{Verified security-critical transaction execution, approval, and authorization workflows for enterprise wallets}
+    \resumeItem{Validated multiple key types, quorum-based approvals, and access-control policies}
+  \resumeItemListEnd
+  \vspace{4pt}
 
-    \resumeSubheading
-      {Ledger}
-      {Automation Test Engineer | Fintech / Cryptocurrency}
-      {2021-08 -- 2022-09}
-      \resumeItemListStart
-        \resumeItem{Developed automated validation and regression testing solutions for a cryptocurrency custody platform}
-        \resumeItem{Verified security-critical transaction execution and approval workflows for enterprise cryptocurrency wallets}
-        \resumeItem{Validated authorization workflows involving multiple key types, quorum-based approvals, access control policies}
-      \resumeItemListEnd
-      \vspace{5pt}
+  \resumeSubheading{Intellias}{Automation Test Engineer | Automotive}{2017-12 -- 2021-08}
+  \resumeItemListStart
+    \resumeItem{Developed automated tests for an Android tire-management system using Python, pytest, and Appium}
+    \resumeItem{Tested embedded car-navigation systems, including field testing across Europe and investigation of production issues}
+  \resumeItemListEnd
+  \vspace{4pt}
 
+  \resumeSubheading{EPAM Systems}{Test Engineer | E-commerce}{2016-08 -- 2017-12}
+  \resumeItemListStart
+    \resumeItem{Implemented a custom automation framework for a large-scale e-commerce solution}
+    \resumeItem{Maintained Jenkins CI/CD pipelines and performed REST API validation}
+    \resumeItem{Supported document automation and backend workflows for an enterprise insurance digitization project}
+  \resumeItemListEnd
+  \vspace{4pt}
 
-    \resumeSubheading
-      {Intellias}
-      {Automation Test Engineer | Automotive}
-      {2017-12 -- 2021-08}
-      \resumeItemListStart
-        \resumeItem{Developed automated testing for an Android-based tire management system using Python, pytest, and Appium}
-        \resumeItem{Contributed to testing of embedded car navigation systems, including field testing across Europe and validation of production issues}
-      \resumeItemListEnd
-      \vspace{5pt}
+  \resumeSubheading{GlobalLogic}{Test Engineer | Broadcast Media}{2014-12 -- 2016-03}
+  \resumeItemListStart
+    \resumeItem{Designed and executed functional and regression test plans for a desktop broadcast-management system}
+    \resumeItem{Reviewed SRS requirements and maintained traceability between specifications and test coverage across release cycles}
+  \resumeItemListEnd
 
+\resumeSubHeadingListEnd
 
-    \resumeSubheading
-      {EPAM Systems}
-      {Test Engineer | E-commerce}
-      {2016-08 -- 2017-12}
-      \resumeItemListStart
-        \resumeItem{Implemented a custom automation framework for a large-scale e-commerce solution}
-        \resumeItem{Maintained CI/CD pipelines using Jenkins and performed REST API validation}
-        \resumeItem{Supported document automation and backend workflows for an enterprise insurance digitization project}
-      \resumeItemListEnd
-      \vspace{5pt}
-
-
-    \resumeSubheading
-      {GlobalLogic}
-      {Test Engineer | Broadcast Media}
-      {2014-12 -- 2016-03}
-      \resumeItemListStart
-        \resumeItem{Designed and executed functional and regression test plans for a desktop-based broadcast management system}
-        \resumeItem{Reviewed software requirements (SRS) and ensured traceability between specifications and test coverage across release cycles}
-      \resumeItemListEnd
-
-  \resumeSubHeadingListEnd
-%----------------------------------------
-
-
-%-----------EDUCATION--------------------
 \section{Education}
-  \resumeSubHeadingListStart
-    \resumeEduHeading
-      {Igor Sikorsky Kyiv Polytechnic Institute}
-      {B.Sc. in Automation and Computer-Integrated Technologies}
-      {2010 -- 2014}
-  \resumeSubHeadingListEnd
-%----------------------------------------
+\resumeSubHeadingListStart
+  \resumeEduHeading{Igor Sikorsky Kyiv Polytechnic Institute}{B.Sc. in Automation and Computer-Integrated Technologies}{2010 -- 2014}
+\resumeSubHeadingListEnd
+
 \end{document}
